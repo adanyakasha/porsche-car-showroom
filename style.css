@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+.logo {
+    color: #c5a46d;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c5a46d;
+}
+
+/* COMMON ELEMENTS */
+
+.eyebrow {
+    color: #c5a46d;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.gold-button {
+    display: inline-block;
+    padding: 16px 28px;
+    border: 1px solid #c5a46d;
+    color: #c5a46d;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.gold-button:hover {
+    background: #c5a46d;
+    color: #080808;
+}
+
+/* HOMEPAGE HERO */
+
+.home-hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.7)),
+        url("images/porsche-hero.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    padding: 170px 10% 120px;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: clamp(55px, 9vw, 105px);
+    line-height: .95;
+    margin: 25px 0;
+    letter-spacing: 3px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: #ddd;
+    line-height: 1.9;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+/* COLLECTION */
+
+.collection {
+    padding: 110px 8%;
+    background: #101010;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.section-heading > p:last-child {
+    color: #999;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: #181818;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: .5s;
+}
+
+.car-card:hover img {
+    transform: scale(1.04);
+}
+
+.car-info {
+    padding: 25px;
+}
+
+.car-info p {
+    color: #c5a46d;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.car-info h3 {
+    font-size: 23px;
+    margin: 15px 0;
+}
+
+.car-info a {
+    color: #c5a46d;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/* ABOUT HERO */
+
+.about-hero {
+    min-height: 90vh;
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.75)),
+        url("images/imagesabout-porsche.jpg") center/cover no-repeat;
+}
+
+.about-hero-content {
+    padding: 160px 10% 100px;
+    max-width: 900px;
+}
+
+.about-hero-content h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: .95;
+    margin: 25px 0;
+}
+
+.about-hero-content > p:last-child {
+    color: #ddd;
+    max-width: 500px;
+    line-height: 1.9;
+}
+
+/* ABOUT INTRO */
+
+.about-intro {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 120px 9%;
+    background: #101010;
+}
+
+.about-intro-text,
+.about-intro-image {
+    flex: 1;
+}
+
+.about-intro-text h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 25px 0;
+}
+
+.about-intro-text > p:last-child {
+    color: #aaa;
+    line-height: 1.9;
+}
+
+.about-intro-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/* ABOUT LEGACY */
+
+.about-legacy {
+    text-align: center;
+    padding: 120px 15%;
+    background: #181818;
+}
+
+.about-legacy h2,
+.about-closing h2 {
+    font-size: 42px;
+    margin: 25px 0;
+}
+
+.about-legacy > p:last-child {
+    color: #aaa;
+    line-height: 1.9;
+}
+
+/* ABOUT CLOSING */
+
+.about-closing {
+    text-align: center;
+    padding: 110px 20px;
+    background: #0b0b0b;
+}
+
+.about-closing .gold-button {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 55px 20px;
+    background: #050505;
+}
+
+.footer h2 {
+    color: #c5a46d;
+    letter-spacing: 8px;
+    margin-bottom: 18px;
+}
+
+.footer p {
+    color: #999;
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 25px 6%;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero-content {
+        padding: 150px 7% 100px;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-intro {
+        flex-direction: column;
+        padding: 75px 7%;
+    }
+
+    .about-intro-text h2 {
+        font-size: 38px;
+    }
+
+    .about-intro-image img {
+        height: 300px;
+    }
+
+    .about-legacy {
+        padding: 80px 8%;
+    }
+
+    .about-legacy h2,
+    .about-closing h2 {
+        font-size: 32px;
+    }
+
+    .about-hero-content {
+        padding: 140px 7% 80px;
+    }
+}
+/* CONTACT PAGE */
+
+.contact-hero {
+    min-height: 75vh;
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.8)),
+        url("images/about-porsche.jpg") center/cover no-repeat;
+}
+
+.contact-heading {
+    padding: 130px 10% 100px;
+    max-width: 850px;
+}
+
+.contact-heading h1 {
+    font-size: clamp(60px, 9vw, 105px);
+    line-height: .95;
+    margin: 25px 0;
+}
+
+.contact-heading > p:last-child {
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    padding: 110px 10%;
+    background: #101010;
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+    font-size: 45px;
+    margin: 25px 0;
+}
+
+.contact-info > p:not(.eyebrow) {
+    color: #aaa;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.contact-detail {
+    margin-top: 30px;
+}
+
+.contact-detail h3 {
+    color: #c5a46d;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.contact-detail p {
+    color: #ccc;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    color: #c5a46d;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    background: #181818;
+    border: 1px solid #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #c5a46d;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background: transparent;
+    cursor: pointer;
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.contact-quote {
+    text-align: center;
+    padding: 100px 20px;
+    background: #181818;
+}
+
+.contact-quote h2 {
+    font-size: 42px;
+    margin: 25px 0;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 75px 7%;
+    }
+
+    .contact-heading {
+        padding: 120px 7% 80px;
+    }
+
+    .contact-info h2,
+    .contact-form-container h2 {
+        font-size: 36px;
+    }
+
+    .contact-quote h2 {
+        font-size: 30px;
+    }
+}
